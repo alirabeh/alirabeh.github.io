@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ali Rabeh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar button {
+      float: left;
+      background-color: inherit;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .navbar button:hover {
+      background-color: #575757;
+    }
+
+    .main-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .left-wrapper {
+      width: 240px;
+      background-color: #f7f7f7;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .left-column img {
+      max-width: 100%;
+      border: 1px solid #000;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .left-column h3 {
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .left-column .social-links a {
+      display: block;
+      margin-top: 6px;
+      color: #0077cc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .left-column .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .right-column {
+      flex: 1;
+      padding: 40px 20px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active-section {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .main-wrapper {
+        flex-direction: column;
+      }
+
+      .left-wrapper {
+        width: 100%;
+        text-align: center;
+      }
+
+      .left-column .social-links a {
+        display: inline-block;
+        margin: 6px 10px 0;
+      }
+
+      .right-column {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <button onclick="showSection('about')">ABOUT</button>
+    <button onclick="showSection('publications')">PUBLICATIONS</button>
+    <button onclick="showSection('projects')">RESEARCH PROJECTS</button>
+    <button onclick="showSection('experience')">EXPERIENCE</button>
+  </div>
+
+  <!-- Main layout -->
+  <div class="main-wrapper">
+    <!-- Left Column -->
+    <div class="left-wrapper">
+      <div class="left-column">
+        <img src="myphoto.jpeg" alt="Ali Rabeh">
+        <h3>Ali Rabeh</h3>
+        <div style="font-size: 14px; color: #444; margin-bottom: 10px; line-height: 1.4;">
+          Machine Learning Engineer<br>
+          Applied Materials, Santa Clara, CA
+        </div>
+        <div class="social-links">
+          <a href="https://scholar.google.com/citations?user=iR7jCn8AAAAJ" target="_blank">Google Scholar</a>
+          <a href="https://github.com/alirabeh" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/alirabeh/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+      
+      <!-- ABOUT -->
+      <div class="section active-section" id="about">
+        <h3>Biography</h3>
+        <p>
+          CFD/ML researcher with 6+ years of experience in computational fluid dynamics and scientific machine learning (SciML). Proven ability to accelerate physics-based simulations for industrial applications using neural operators and high-performance computing frameworks.
+        </p>
+
+        <h3>Education</h3>
+        <p><strong>Iowa State University</strong><br>Ph.D. in Mechanical Engineering, Minor in Applied Scientific Computing<br>2017 – 2023</p>
+        <p><strong>Augustana College</strong><br>B.A. in Applied Mathematics and Physics<br>2013 – 2017</p>
+
+        <h3>Skills</h3>
+        <ul style="padding-left: 20px; columns: 2;">
+          <li>Python, C++, Matlab</li>
+          <li>PyTorch, OpenCV, NumPy, SciML</li>
+          <li>HPC, Linux, Git, WandB</li>
+          <li>Paraview, VSCode, HuggingFace</li>
+        </ul>
+        <h3>Interests</h3>
+        <ul style="padding-left: 20px; columns: 2;">
+          <li>Scientific Machine Learning</li>
+          <li>Scientific Computing</li>
+          <li>Computational Fluid Dynamics</li>
+          <li>Multiphase Flow</li>
+        </ul>        
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="section" id="publications">
+        <h2>Selected Publications</h2>
+        <ul style="padding-left: 20px; line-height: 1.8;">
+          <li><strong>Ali Rabeh</strong>, et al. Derivative-Informed Neural Operators for Accurate and Generalizable High-Fidelity 3D Fluid Flow around Geometries (2025). <a href="https://arxiv.org/pdf/2503.17289" target="_blank">arXiv</a></li>
+          <li><strong>Ali Rabeh</strong>, et al. Geometry Matters: Benchmarking SciML Approaches for Flow Prediction around Complex Geometries (2025). <a href="https://arxiv.org/pdf/2501.01453" target="_blank">arXiv</a></li>
+          <li><strong>Ali Rabeh</strong>, et al. Modeling high-density two-phase flows with projection-based CHNS solvers (2024). <a href="https://arxiv.org/pdf/2406.17933" target="_blank">arXiv</a></li>
+          <li>Ronak Tali, <strong>Ali Rabeh</strong>, et.al. FlowBench: A Benchmark for Multiphysics Flow Simulations (2024). <a href="https://arxiv.org/pdf/2409.18032" target="_blank">arXiv</a></li>
+          <li>Mehdi Shadkhah, Ronak Tali, <strong>Ali Rabeh</strong>, et.al. MPF-Bench: Dataset for Two-Phase Flow Modeling and Surrogate Learning (2025). <a href="https://arxiv.org/pdf/2502.07080" target="_blank">arXiv</a></li>
+        </ul>
+      </div>
+
+      <!-- RESEARCH PROJECTS -->
+      <div class="section" id="projects">
+        <h2>Research Projects</h2>
+        <h4>FlowBench Dataset</h4>
+        <ul>
+          <li>Led 6-member team to generate 8 TB data of flow around complex geometry using 100K compute hours.</li>
+          <li>Trained 11 neural operators and vision transformers foundation models using PyTorch Lightning.</li>
+          <li>Achieved 80% accuracy in flow prediction with 1000x speedup over CFD solvers.</li>
+        </ul>
+
+        <h4>Derivative-Informed Surrogates for 3D Flow</h4>
+        <ul>
+          <li>Simulated 3D driven-cavity flow around complex geometries using Shifted Boundary Method.</li>
+          <li>Developed Geometric-DeepONet with derivative/physics-informed loss.</li>
+          <li>Achieved 94% velocity and 82% gradient accuracy.</li>
+        </ul>
+
+        <h4>Time-Dependent DeepONet</h4>
+        <ul>
+          <li>Developed a time-dependent Geometric DeepONet model for flow prediction over varying geometries.</li>
+          <li>Forecasted flow over complex geometries with 95% accuracy for long time rollout.</li>
+          <li>Achieved 1000× speedup over CFD (0.01s inference time).</li>
+        </ul>
+
+        <h4>Three-Phase Flow</h4>
+        <ul>
+          <li>Developed a three-phase flow solver using the Cahn-Hilliard Navier-Stokes equations.</li>
+          <li>Implemented a degenerate mobility formulation to capture fine-scale dynamics.</li>
+          <li>Simulated complex flow of three-phase floating and rising bubbles in stratified fluids using AMR.</li>
+        </ul>
+
+        <h4>Two-Phase Flow</h4>
+        <ul>
+          <li>Developed a two-phase flow solver using the Cahn-Hilliard Navier-Stokes equations.</li>
+          <li>Simulated two-phase flows with up to 120K density ratio in 3D using adaptive mesh refinement.</li>
+        </ul>        
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section" id="experience">
+        <h2>Experience</h2>
+
+        <p><strong>Applied Materials</strong><br>Machine Learning Engineer<br>June 2025 – Present</p>
+        <p><strong>Translational AI Center</strong><br>Postdoctoral Research Associate<br>Jan 2024 – May 2025</p>
+        <p><strong>Iowa State University</strong><br>Graduate Research Assistant<br>Jun 2017 – Dec 2023</p>
+
+      <h3>Teaching</h3>
+      <ul>
+        <li>
+          <strong>ME 1600: Mechanical Engineering Problem Solving with Computer Applications</strong><br>
+          Instructor of Record – Developed and taught Python-based curriculum for statics and thermo-fluid problems.
+        </li>
+        <li>
+          <strong>
+            <a href="https://stage.iowastateonline.iastate.edu/programs-and-courses/professional-development-courses/scientific-machine-learning/" target="_blank">
+              Scientific Machine Learning (Professional Development Course)
+            </a>
+          </strong><br>
+          Designed and instructed an industry-focused course on physics-informed machine learning using PyTorch.
+        </li>
+      </ul>
+
+
+    </div> <!-- end right column -->
+  </div> <!-- end main wrapper -->
+
+  <!-- JavaScript for Tab Switching -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active-section'));
+      document.getElementById(sectionId).classList.add('active-section');
+    }
+  </script>
+
+</body>
+</html>
