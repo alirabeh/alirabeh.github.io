@@ -99,6 +99,17 @@
         padding: 20px;
       }
     }
+    /* style only the links in your publications section */
+    #publications a {
+      color: black;
+      text-decoration: none;
+    }
+
+    #publications a:hover {
+      /* optional: add hover style */
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
@@ -146,12 +157,22 @@
           <a 
           href="https://www.me.iastate.edu/bglab/" 
           target="_blank"
-          rel="noopener noreferrer">
-          >Dr. Baskar Ganapathysubramanian  
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          Dr. Baskar Ganapathysubramanian  
           </a>. My Ph.D. thesis focused on developing energy-stable solver for three-phase Cahn-Hilliard Navier-Stokes equations using an in-house finite-element framework. I also worked on simulating high density ratio two-phase flows in micro-gravity using a modified residual-based variational multiscale stabilization.
         </p>
         <p>  
-          After my Ph.D., I worked as a postdoctoral research associate at the Translational AI Center at Iowa State University, advised by Dr. Baskar Ganapathysubramanian. My postdoctoral research focused on extedning state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of an extensive benchmark dataset (FlowBench) to help test and advance scientific machine learning (SciML) models.  
+          After my Ph.D., I worked as a postdoctoral research associate at the Translational AI Center at Iowa State University, advised by 
+          <a 
+          href="https://www.me.iastate.edu/bglab/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          Dr. Baskar Ganapathysubramanian  
+          </a>. My postdoctoral research focused on extedning state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of an extensive benchmark dataset (FlowBench) to help test and advance scientific machine learning (SciML) models.  
         </p>
 
         <p>  
@@ -179,16 +200,31 @@
       </div>
 
       <!-- PUBLICATIONS -->
-      <div class="section" id="publications">
-        <h2>Selected Publications</h2>
-        <ul style="padding-left: 20px; line-height: 1.8;">
-          <li><strong>Ali Rabeh</strong>, et al. Derivative-Informed Neural Operators for Accurate and Generalizable High-Fidelity 3D Fluid Flow around Geometries (2025). <a href="https://arxiv.org/pdf/2503.17289" target="_blank">arXiv</a></li>
-          <li><strong>Ali Rabeh</strong>, et al. Geometry Matters: Benchmarking SciML Approaches for Flow Prediction around Complex Geometries (2025). <a href="https://arxiv.org/pdf/2501.01453" target="_blank">arXiv</a></li>
-          <li><strong>Ali Rabeh</strong>, et al. Modeling high-density two-phase flows with projection-based CHNS solvers (2024). <a href="https://arxiv.org/pdf/2406.17933" target="_blank">arXiv</a></li>
-          <li>Ronak Tali, <strong>Ali Rabeh</strong>, et.al. FlowBench: A Benchmark for Multiphysics Flow Simulations (2024). <a href="https://arxiv.org/pdf/2409.18032" target="_blank">arXiv</a></li>
-          <li>Mehdi Shadkhah, Ronak Tali, <strong>Ali Rabeh</strong>, et.al. MPF-Bench: Dataset for Two-Phase Flow Modeling and Surrogate Learning (2025). <a href="https://arxiv.org/pdf/2502.07080" target="_blank">arXiv</a></li>
-        </ul>
-      </div>
+    <div class="section" id="publications">
+      <h2>Selected Publications</h2>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li>
+          <strong>Ali Rabeh</strong>, et al. Derivative-Informed Neural Operators for Accurate and Generalizable High-Fidelity 3D Fluid Flow around Geometries (2025).
+          <a href="https://arxiv.org/pdf/2503.17289" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+        </li>
+        <li>
+          <strong>Ali Rabeh</strong>, et al. Geometry Matters: Benchmarking SciML Approaches for Flow Prediction around Complex Geometries (2025).
+          <a href="https://arxiv.org/pdf/2501.01453" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+        </li>
+        <li>
+          <strong>Ali Rabeh</strong>, et al. Modeling high-density two-phase flows with projection-based CHNS solvers (2024).
+          <a href="https://arxiv.org/pdf/2406.17933" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+        </li>
+        <li>
+          Ronak Tali, <strong>Ali Rabeh</strong>, et al. FlowBench: A Benchmark for Multiphysics Flow Simulations (2024).
+          <a href="https://arxiv.org/pdf/2409.18032" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+        </li>
+        <li>
+          Mehdi Shadkhah, Ronak Tali, <strong>Ali Rabeh</strong>, et al. MPF-Bench: Dataset for Two-Phase Flow Modeling and Surrogate Learning (2025).
+          <a href="https://arxiv.org/pdf/2502.07080" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+        </li>        
+      </ul>
+    </div>
 
       <!-- RESEARCH PROJECTS -->
       <div class="section" id="projects">
