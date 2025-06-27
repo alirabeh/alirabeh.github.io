@@ -118,9 +118,9 @@
   <!-- Navigation Bar -->
   <div class="navbar">
     <button onclick="showSection('about')">ABOUT</button>
-    <button onclick="showSection('publications')">PUBLICATIONS</button>
-    <button onclick="showSection('projects')">RESEARCH PROJECTS</button>
     <button onclick="showSection('experience')">EXPERIENCE</button>
+    <button onclick="showSection('projects')">RESEARCH PROJECTS</button>
+    <button onclick="showSection('publications')">PUBLICATIONS</button>
   </div>
 
   <!-- Main layout -->
@@ -209,6 +209,20 @@
           <li>Achieved 80% accuracy in flow prediction with 1000x speedup over CFD solvers.</li>
         </ul>
 
+        <!-- Embedded GIF -->
+        <div class="project-gif">
+          <img
+            src="velocity_skeleton.gif"
+            alt="Velocity Skeleton Animation"
+            style="
+              max-width: 100%;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+              margin-top: 12px;
+            "
+          />
+        </div>
         <h4>Derivative-Informed Surrogates for 3D Flow</h4>
         <ul>
           <li>Simulated 3D driven-cavity flow around complex geometries using Shifted Boundary Method.</li>
@@ -287,7 +301,7 @@
           <a href="https://arxiv.org/pdf/2502.07080" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
         </li>        
       </ul>
-      
+
     </div> <!-- end right column -->
   </div> <!-- end main wrapper -->
 
