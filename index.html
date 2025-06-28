@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Ali Rabeh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -71,6 +76,10 @@
       line-height: 1.8;
       text-align: justify;
     }
+    
+    .project-image {
+      text-align: center;
+    }
 
     .section {
       display: none;
@@ -110,6 +119,74 @@
       text-decoration: underline;
     }
 
+    .video-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;        /* space between videos */
+      margin-top: 20px; /* space above the row */
+    }
+
+    .video-item {
+      text-align: center;
+    }
+
+    .video-item video {
+      max-width: 300px;               /* or 30% */
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+      
+    .video-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;        /* space between images */
+      margin-top: 20px; /* space above the row */
+    }
+
+    .image-row img {
+      max-width: 45%;               /* each up to 45% of the container */
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    /* center the icon row under your photo */
+    .left-column .social-links {
+      text-align: center;
+    }
+
+    /* display the links inline and bump up icon size */
+    .left-column .social-links a {
+      display: inline-block !important;
+      margin: 0 8px !important;
+      font-size: 24px !important;      /* or whatever size you like */
+      color: #0077cc;                   /* keep your brand color */
+      text-decoration: none !important; /* remove any underline */
+    }
+
+    .left-column .social-links a:hover {
+      color: #005fa3;
+    }
+
+    .video-figure {
+      margin-top: 20px;
+    }
+
+    .video-figure figcaption {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #444;
+    }
+
   </style>
 </head>
 
@@ -128,17 +205,28 @@
     <!-- Left Column -->
     <div class="left-wrapper">
       <div class="left-column">
-        <img src="myphoto.jpeg" alt="Ali Rabeh">
+        <img src="media/myphoto.jpeg" alt="Ali Rabeh">
         <h3>Ali Rabeh</h3>
         <div style="font-size: 14px; color: #444; margin-bottom: 10px; line-height: 1.4;">
           Machine Learning Engineer<br>
           Applied Materials, Santa Clara, CA
         </div>
         <div class="social-links">
-          <a href="https://scholar.google.com/citations?user=iR7jCn8AAAAJ" target="_blank">Google Scholar</a>
-          <a href="https://github.com/alirabeh" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/alirabeh/" target="_blank">LinkedIn</a>
+          <a href="mailto:alirabeha9@gmail.com" target="_blank" rel="noopener">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=iR7jCn8AAAAJ" target="_blank" rel="noopener">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+          <a href="https://github.com/alirabeh" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/alirabeh/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
+
+
       </div>
     </div>
 
@@ -160,8 +248,8 @@
           rel="noopener noreferrer"
           style="text-decoration: none; color: red;"
           >
-          Dr. Baskar Ganapathysubramanian  
-          </a>. My Ph.D. thesis focused on developing energy-stable solver for three-phase Cahn-Hilliard Navier-Stokes equations using an in-house finite-element framework. I also worked on simulating high density ratio two-phase flows in micro-gravity using a modified residual-based variational multiscale stabilization.
+          Dr. Baskar Ganapathysubramanian.  
+          </a> My Ph.D. thesis focused on developing energy-stable solver for three-phase Cahn-Hilliard Navier-Stokes equations using an in-house finite-element framework. I also worked on simulating high density ratio two-phase flows in micro-gravity using a modified residual-based variational multiscale stabilization.
         </p>
         <p>  
           After my Ph.D., I worked as a postdoctoral research associate at the Translational AI Center at Iowa State University, advised by 
@@ -171,8 +259,16 @@
           rel="noopener noreferrer"
           style="text-decoration: none; color: red;"
           >
-          Dr. Baskar Ganapathysubramanian  
-          </a>. My postdoctoral research focused on extedning state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of an extensive benchmark dataset (FlowBench) to help test and advance scientific machine learning (SciML) models.  
+          Dr. Baskar Ganapathysubramanian.  
+          </a> My postdoctoral research focused on extedning state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of an extensive benchmark dataset 
+          <a 
+          href="https://baskargroup.bitbucket.io/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (FlowBench)  
+          </a> to help test and advance scientific machine learning (SciML) models.  
         </p>
 
         <p>  
@@ -203,77 +299,237 @@
       <div class="section" id="projects">
         <h2>Research Projects</h2>
         <h4>FlowBench Dataset</h4>
-        <ul>
-          <li>Led 6-member team to generate 8 TB data of flow around complex geometry using 100K compute hours.</li>
-          <li>Trained 11 neural operators and vision transformers foundation models using PyTorch Lightning.</li>
-          <li>Achieved 80% accuracy in flow prediction with 1000x speedup over CFD solvers.</li>
-        </ul>
+        <p>
+          This project focused on developing           
+          <a 
+          href="https://baskargroup.bitbucket.io/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (FlowBench),  
+          </a> a comprehensive benchmark dataset for multiphysics flow simulations around complex geometries. The dataset includes 2D and 3D simulations of steady and transient flows and covers a wide range of Reynolds numbers. The  gaol is to facilitate the development and evaluation of scientific machine learning models for fluid flow applications.
+        </p>
 
-        <!-- Embedded GIF -->
-        <div class="project-gif">
+        <figure class="project-image">
           <img
-            src="velocity_skelneton.gif"
+            src="media/velocity_skelneton.gif"
             style="
-              max-width: 100%;
+              max-width: 70%;
               border: 1px solid #ddd;
               border-radius: 6px;
               box-shadow: 0 2px 6px rgba(0,0,0,0.2);
               margin-top: 12px;
             "
           />
-        </div>
+          <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
+            In video above: 2D driven-cavity flow around nonparametric shapes at varying Reynolds numbers. 
+          </figcaption>
+        </figure>
+
         <h4>Derivative-Informed Surrogates for 3D Flow</h4>
-        <ul>
-          <li>Simulated 3D driven-cavity flow around complex geometries using Shifted Boundary Method.</li>
-          <li>Developed Geometric-DeepONet with derivative/physics-informed loss.</li>
-          <li>Achieved 94% velocity and 82% gradient accuracy.</li>
-        </ul>
+        <p>
+          This project developed a derivative-informed Geometric DeepONet model to predict 3D fluid flow around complex geometries. By incorporating derivative and physics-informed loss functions, the model achieved high accuracy in velocity and gradient predictions, demonstrating the effectiveness of physics constraints in scientific machine learning.
+        </p>
+        <!-- Embed the figure -->
+        <figure class="project-image">
+          <img
+            src="media/derivative_informed.png"
+            style="
+              max-width: 70%;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+              margin-top: 12px;
+            "
+          />
+          <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
+            In figure above: visualization of velocity predictions using mean squared error (L1) versus derivative-informed (L2) for in-sample (random) and out-of-sample (extrapolatory) train/test splitting.
+          </figcaption>
+        </figure>
 
         <h4>Time-Dependent DeepONet</h4>
-        <ul>
-          <li>Developed a time-dependent Geometric DeepONet model for flow prediction over varying geometries.</li>
-          <li>Forecasted flow over complex geometries with 95% accuracy for long time rollout.</li>
-          <li>Achieved 1000× speedup over CFD (0.01s inference time).</li>
-        </ul>
+        <p>
+          This project developed a time-dependent Geometric DeepONet model to predict fluid flow over varying geometries. The model was trained on a dataset of 2D flow past complex objects and demonstrated high accuracy and significant speedup compared to traditional CFD methods.
+        </p>
+        <!-- Embedded GIF -->
+          <figure class="project-image">
+          <img
+            src="media/FPO.gif"
+            style="
+              max-width: 70%;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+              margin-top: 12px;
+            "
+          />
+          <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
+            In video above: time-trajectory of ground-truth versus predicted velocity (u, v) of flow past complex geometries. 
+          </figcaption>
+        </figure>
 
         <h4>Three-Phase Flow</h4>
-        <ul>
-          <li>Developed a three-phase flow solver using the Cahn-Hilliard Navier-Stokes equations.</li>
-          <li>Implemented a degenerate mobility formulation to capture fine-scale dynamics.</li>
-          <li>Simulated complex flow of three-phase floating and rising bubbles in stratified fluids using AMR.</li>
-        </ul>
+        <p>
+          This project developed a three-phase flow solver using projection-based Cahn-Hilliard Navier-Stokes equations to simulate complex interactions of three immiscible fluids. The solver employed adaptive mesh refinement (AMR) to efficiently capture fine-scale dynamics, enabling the study of phenomena such as floating and rising bubbles in stratified fluids.
+        </p>
+        <figure class="video-figure">
+        <div class="video-row">
+          <div class="video-item">
+            <video
+              src="media/stratified_R=1mm.mp4"
+              autoplay loop muted playsinline
+            ></video>
+            <p>Radius = 1 mm</p>
+          </div>
+          <div class="video-item">
+            <video
+              src="media/stratified_R=2mm.mp4"
+              autoplay loop muted playsinline
+            ></video>
+            <p>Radius = 2 mm</p>
+          </div>
+        </div>
+        <figcaption>
+          In video above: two cases of bubble‐rise in a stratified flow with a critical radius of 1.5 mm. The smaller bubble becomes trapped at the interface, while the larger bubble penetrates through.
+        </figcaption>
+      </figure>
+    </div>
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+  <h2>Experience</h2>
 
-        <h4>Two-Phase Flow</h4>
-        <ul>
-          <li>Developed a two-phase flow solver using the Cahn-Hilliard Navier-Stokes equations.</li>
-          <li>Simulated two-phase flows with up to 120K density ratio in 3D using adaptive mesh refinement.</li>
-        </ul>        
-      </div>
+  <h3>Professional Experience</h3>
 
-      <!-- EXPERIENCE -->
-      <div class="section" id="experience">
-        <h2>Experience</h2>
-
-        <p><strong>Applied Materials</strong><br>Machine Learning Engineer<br>June 2025 – Present</p>
-        <p><strong>Translational AI Center</strong><br>Postdoctoral Research Associate<br>Jan 2024 – May 2025</p>
-        <p><strong>Iowa State University</strong><br>Graduate Research Assistant<br>Jun 2017 – Dec 2023</p>
-
-      <h3>Teaching</h3>
-      <ul>
-        <li>
-          <strong>ME 1600: Mechanical Engineering Problem Solving with Computer Applications</strong><br>
-          Instructor of Record – Developed and taught Python-based curriculum for statics and thermo-fluid problems.
-        </li>
-        <li>
-          <strong>
-            <a href="https://stage.iowastateonline.iastate.edu/programs-and-courses/professional-development-courses/scientific-machine-learning/" target="_blank">
-              Scientific Machine Learning (Professional Development Course)
-            </a>
-          </strong><br>
-          Designed and instructed an industry-focused course on physics-informed machine learning using PyTorch.
-        </li>
+  <!-- Applied Materials -->
+  <p>
+    <strong>Applied Materials, Inc. (AMAT)</strong><br>
+    Machine Learning Engineer &mdash; Santa Clara, CA<br>
+    <em>June 2025 – Present</em>
+  </p>
+  <ul style="padding-left: 20px;">
+    <li>
+      <strong>Generative Design</strong><br>
+      <ul style="padding-left: 20px;">
+      <li>Used AI/ML to discover new designs for application in the semiconductor industry.</li>
       </ul>
-    </div>       
+    </li>
+  </ul>
+
+    <!-- Translational AI Center -->
+    <p>
+      <strong>Translational AI Center (TrAC)</strong><br>
+      Postdoctoral Research Associate &mdash; Ames, IA<br>
+      <em>Jan 2024 – May 2025</em>
+    </p>
+    <ul style="padding-left: 20px;">
+      <li>
+        <strong>Complex Geometry Flow Modeling</strong>
+        <ul style="padding-left: 20px;">
+          <li>Led 6-member team to generate an 8 TB dataset of 10 000 flow cases around complex geometries using the Shifted Boundary Method.</li>
+          <li>Designed a PyTorch Lightning framework to train 11 SciML models, achieving 80% flow accuracy           
+          <a 
+          href="https://github.com/alirabeh/GeometryMatters" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (GitHub). 
+          </a>
+        </li>
+          <li>Deployed models for rapid CFD replacement (0.01 s inference), demonstrating 100× speedup over CFD solvers.</li>
+        </ul>
+      </li>      
+      <li>
+        <strong>Derivative-Informed 3D Surrogates</strong>
+        <ul style="padding-left: 20px;">
+          <li>Utilized the Shifted Boundary Method to simulate 3D driven-cavity across 100 geometries.</li>
+          <li>Developed the Geometric-DeepONet model using derivative-informed and physics-informed losses 
+          <a 
+          href="https://github.com/alirabeh/DI-DeepONet" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (GitHub). 
+          </a>
+        </li>
+          <li>Achieved 94% velocity and 82% gradient accuracy in random settings, and 82%/61% in extrapolatory regime.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Time-Dependent Geometric DeepONet</strong>
+        <ul style="padding-left: 20px;">
+          <li>Developed a time-dependent Geometric DeepONet using signed-distance fields and flow history 
+          <a 
+          href="https://github.com/alirabeh/TimeDependent-DeepONet" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (GitHub). 
+          </a>
+        </li>
+          <li>Trained on 1100 samples, delivering rollouts with &lt; 5% error for unsteady flow over complex geometries.</li>
+          <li>Achieved 0.01 s inference time with 1000× speedup over CFD for rapid design optimization.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Iowa State University GRA -->
+    <p>
+      <strong>Iowa State University</strong><br>
+      Graduate Research Assistant &mdash; Ames, IA<br>
+      <em>Jun 2017 – Dec 2023</em>
+    </p>
+    <ul style="padding-left: 20px;">
+      <li>
+        <strong>Three-Phase Flow</strong>
+        <ul style="padding-left: 20px;">
+          <li>Developed a three-phase solver using projection-based Cahn-Hilliard Navier–Stokes equations.</li>
+          <li>Implemented mass-conserving, energy-stable degenerate-mobility formulation using an in-house library.</li>
+          <li>Simulated floating oil and rising bubbles in stratified fluids using parallel adaptive meshing.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Two-Phase Flow</strong>
+        <ul style="padding-left: 20px;">
+          <li>Developed a second-order two-phase solver using Cahn-Hilliard Navier–Stokes equations.</li>
+          <li>Implemented variational multiscale stabilization in FEniCS for high-density-ratio flows.</li>
+          <li>Simulated 3D flows with density ratios up to 120,000 using adaptive mesh refinement with 100 Million unknowns.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Teaching Experience</h3>
+    <p>
+      <strong>Iowa State University</strong><br>
+      Instructor of Record, ME 1600: Python for Engineering Applications<br>
+      <em>Jan 2025 – May 2025</em>
+    </p>
+    <ul style="padding-left: 20px;">
+      <li>Instructed 40 students on using Python (NumPy, SciPy) to solve complex statics and thermo-fluids problems.</li>
+    </ul>
+
+    <p>
+      <strong>Translational AI Center (TrAC)</strong><br>
+      Professional Development Instructor<br>
+      <em>Sep 2024 – Nov 2024</em>
+    </p>
+    <ul style="padding-left: 20px;">
+      <li>Developed and delivered a course for 12 industry professionals on using physics-informed and data-driven machine learning models to solve PDEs 
+          <a 
+          href="https://stage.iowastateonline.iastate.edu/programs-and-courses/professional-development-courses/scientific-machine-learning/" 
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color: red;"
+          >
+          (course). 
+          </a> 
+      </li>
+    </ul>
+  </div>
+    </div> <!-- end right column -->     
       
       <!-- PUBLICATIONS -->
     <div class="section" id="publications">
