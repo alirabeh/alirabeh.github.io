@@ -108,16 +108,31 @@
         padding: 20px;
       }
     }
-    /* style only the links in your publications section */
-    #publications a {
-      color: black;
+    /* Publications styling */
+    #publications-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    #publications-list .pub-item {
+      padding: 8px;
+      background: #fafafa;
+      border-radius: 4px;
+    }
+    #publications-list .pub-item:hover {
+      background: #f0f0f0;
+    }
+    #publications-list .pub-item a {
+      margin-left: 6px;
+      color: #0077cc;
       text-decoration: none;
     }
+    #publications-list .pub-item a:hover { text-decoration: underline; }
 
-    #publications a:hover {
-      /* optional: add hover style */
-      text-decoration: underline;
-    }
+
 
     .video-row {
       display: flex;
@@ -329,7 +344,7 @@
 
         <h4>Derivative-Informed Surrogates for 3D Flow</h4>
         <p>
-          This project developed a derivative-informed Geometric DeepONet model to predict 3D fluid flow around complex geometries. By incorporating derivative and physics-informed loss functions, the model achieved high accuracy in velocity and gradient predictions, demonstrating the effectiveness of physics constraints in scientific machine learning.
+          This project focused on developing a derivative-informed Geometric-DeepONet model to predict flow around complex 3D geometries. By incorporating derivative and physics-informed losses, the model achieved high accuracy in both in-sample and out-of-sample scenarios.
         </p>
         <!-- Embed the figure -->
         <figure class="project-image">
@@ -350,7 +365,7 @@
 
         <h4>Time-Dependent DeepONet</h4>
         <p>
-          This project developed a time-dependent Geometric DeepONet model to predict fluid flow over varying geometries. The model was trained on a dataset of 2D flow past complex objects and demonstrated high accuracy and significant speedup compared to traditional CFD methods.
+          This project focused on developing a time-dependent Geometric-DeepONet model to predict fluid flow over varying geometries. The model was trained on a dataset of 2D flow past complex objects and demonstrated high accuracy and speedup over CFD methods.
         </p>
         <!-- Embedded GIF -->
           <figure class="project-image">
@@ -365,13 +380,13 @@
             "
           />
           <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
-            In video above: time-trajectory of ground-truth versus predicted velocity (u, v) of flow past complex geometries. 
+            In video above: ground-truth versus predicted velocity (U, V) of flow past complex geometries using time-dependent Geometric-DeepONet.
           </figcaption>
         </figure>
 
         <h4>Three-Phase Flow</h4>
         <p>
-          This project developed a three-phase flow solver using projection-based Cahn-Hilliard Navier-Stokes equations to simulate complex interactions of three immiscible fluids. The solver employed adaptive mesh refinement (AMR) to efficiently capture fine-scale dynamics, enabling the study of phenomena such as floating and rising bubbles in stratified fluids.
+          This project focused on developing three-phase flow solver using projection-based Cahn-Hilliard Navier-Stokes equations. The solver employed adaptive mesh refinement (AMR) to efficiently simulate problems such as floating and rising bubbles in stratified fluids.
         </p>
         <figure class="video-figure">
         <div class="video-row">
@@ -391,7 +406,7 @@
           </div>
         </div>
         <figcaption>
-          In video above: two cases of bubble‐rise in a stratified flow with a critical radius of 1.5 mm. The smaller bubble becomes trapped at the interface, while the larger bubble penetrates through.
+          In video above: two cases of bubble rise in a stratified flow with a critical radius of 1.5 mm. The smaller bubble becomes trapped at the interface, while the larger bubble penetrates through.
         </figcaption>
       </figure>
     </div>
@@ -532,32 +547,32 @@
     </div> <!-- end right column -->     
       
       <!-- PUBLICATIONS -->
-    <div class="section" id="publications">
-      <h2>Selected Publications</h2>
-      <ul style="padding-left: 20px; line-height: 1.8;">
-        <li>
-          <strong>Ali Rabeh</strong>, et al. 3D Neural Operator-Based Flow Surrogates around 3D geometries: Signed Distance Functions and Derivative Constraints (2025).
-          <a href="https://arxiv.org/pdf/2503.17289" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
-        </li>
-        <li>
-          <strong>Ali Rabeh</strong>, et al. Geometry Matters: Benchmarking SciML Approaches for Flow Prediction around Complex Geometries (2025).
-          <a href="https://arxiv.org/pdf/2501.01453" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
-        </li>
-        <li>
-          <strong>Ali Rabeh</strong>, et al. Modeling high-density two-phase flows with projection-based CHNS solvers (2024).
-          <a href="https://arxiv.org/pdf/2406.17933" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
-        </li>
-        <li>
-          Ronak Tali, <strong>Ali Rabeh</strong>, et al. FlowBench: A Benchmark for Multiphysics Flow Simulations (2024).
-          <a href="https://arxiv.org/pdf/2409.18032" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
-        </li>
-        <li>
-          Mehdi Shadkhah, Ronak Tali, <strong>Ali Rabeh</strong>, et al. MPF-Bench: Dataset for Two-Phase Flow Modeling and Surrogate Learning (2025).
-          <a href="https://arxiv.org/pdf/2502.07080" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
-        </li>        
-      </ul>
-
-    </div> <!-- end right column -->
+      <div class="section" id="publications">
+        <h2>Selected Publications</h2>
+        <ul id="publications-list">
+          <li class="pub-item">
+            <strong>Ali Rabeh</strong>, et al. 3D Neural Operator-Based Flow Surrogates around 3D geometries: Signed Distance Functions and Derivative Constraints (2025)
+            <a href="https://arxiv.org/pdf/2503.17289" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+          </li>
+          <li class="pub-item">
+            <strong>Ali Rabeh</strong>, et al. Geometry Matters: Benchmarking SciML Approaches for Flow Prediction around Complex Geometries (2025)
+            <a href="https://arxiv.org/pdf/2501.01453" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+          </li>
+          <li class="pub-item">
+            <strong>Ali Rabeh</strong>, et al. Modeling high-density two-phase flows with projection-based CHNS solvers (2024)
+            <a href="https://arxiv.org/pdf/2406.17933" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+          </li>
+          <li class="pub-item">
+            Ronak Tali, <strong>Ali Rabeh</strong>, et al. FlowBench: A Benchmark for Multiphysics Flow Simulations (2024)
+            <a href="https://arxiv.org/pdf/2409.18032" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+          </li>
+          <li class="pub-item">
+            Mehdi Shadkhah, Ronak Tali, <strong>Ali Rabeh</strong>, et al. MPF-Bench: Dataset for Two-Phase Flow Modeling and Surrogate Learning (2025)
+            <a href="https://arxiv.org/pdf/2502.07080" target="_blank" rel="noopener noreferrer">[ARXIV]</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div> <!-- end main wrapper -->
 
   <!-- JavaScript for Tab Switching -->
