@@ -113,22 +113,20 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      display: block;
     }
     #publications-list .pub-item {
       padding: 8px;
+      margin-bottom: 8px;    /* separate them vertically */
       background: #fafafa;
       border-radius: 4px;
-    }
-    #publications-list .pub-item:hover {
-      background: #f0f0f0;
+      text-align: left;      /* prevent justification */
     }
     #publications-list .pub-item a {
       margin-left: 6px;
-      color: #0077cc;
-      text-decoration: none;
+    }
+    #publications-list .pub-item:hover {
+      background: #f0f0f0;
     }
     #publications-list .pub-item a:hover { text-decoration: underline; }
 
@@ -252,7 +250,7 @@
       <div class="section active-section" id="about">
         <h3>Biography</h3>
         <p>
-          I am a machine learning engineer at Applied Materials working on generative design. I currently work on using machine learning to generate new designs for applications in the seminconductor industry. I have extensive experience in scientific machine learning, computational fluid dynamics, and scientific computing. 
+          I am a machine learning engineer at Applied Materials working on generative design. I currently work on using machine learning to generate new designs for applications in the semiconductor industry. I have extensive experience in scientific machine learning, computational fluid dynamics, and scientific computing. 
         </p>
 
         <p>  
@@ -264,7 +262,7 @@
           style="text-decoration: none; color: red;"
           >
           Dr. Baskar Ganapathysubramanian.  
-          </a> My Ph.D. thesis focused on developing energy-stable solver for three-phase Cahn-Hilliard Navier-Stokes equations using an in-house finite-element framework. I also worked on simulating high density ratio two-phase flows in micro-gravity using a modified residual-based variational multiscale stabilization.
+          </a> My Ph.D. thesis focused on developing an energy-stable solver for three-phase Cahn-Hilliard Navier-Stokes equations using an in-house finite-element framework. I also worked on simulating high-density ratio two-phase flows in microgravity using a modified residual-based variational multiscale stabilization.
         </p>
         <p>  
           After my Ph.D., I worked as a postdoctoral research associate at the Translational AI Center at Iowa State University, advised by 
@@ -275,15 +273,15 @@
           style="text-decoration: none; color: red;"
           >
           Dr. Baskar Ganapathysubramanian.  
-          </a> My postdoctoral research focused on extedning state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of an extensive benchmark dataset 
+          </a> My postdoctoral research focused on extending state-of-the-art neural operators for modeling fluid flow around complex geometries. I also led the creation of  
           <a 
           href="https://baskargroup.bitbucket.io/" 
           target="_blank"
           rel="noopener noreferrer"
           style="text-decoration: none; color: red;"
           >
-          (FlowBench)  
-          </a> to help test and advance scientific machine learning (SciML) models.  
+          FlowBench,  
+          </a> an extensive benchmark dataset to help test and advance scientific machine learning (SciML) models.  
         </p>
 
         <p>  
@@ -322,8 +320,8 @@
           rel="noopener noreferrer"
           style="text-decoration: none; color: red;"
           >
-          (FlowBench),  
-          </a> a comprehensive benchmark dataset for multiphysics flow simulations around complex geometries. The dataset includes 2D and 3D simulations of steady and transient flows and covers a wide range of Reynolds numbers. The  gaol is to facilitate the development and evaluation of scientific machine learning models for fluid flow applications.
+          FlowBench,  
+          </a> a comprehensive benchmark dataset for multiphysics flow simulations around complex geometries. The dataset includes 2D and 3D simulations of steady and transient flows and covers a wide range of Reynolds numbers. The goal is to facilitate the development and evaluation of scientific machine learning models for fluid flow applications.
         </p>
 
         <figure class="project-image">
@@ -338,7 +336,7 @@
             "
           />
           <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
-            In video above: 2D driven-cavity flow around nonparametric shapes at varying Reynolds numbers. 
+            In the video above: 2D driven-cavity flow around nonparametric shapes at varying Reynolds numbers. 
           </figcaption>
         </figure>
 
@@ -359,7 +357,7 @@
             "
           />
           <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
-            In figure above: visualization of prediction accuracy using mean squared error (L1) versus different derivative-informed losses (L2, L3, L4) for in-sample (random) and out-of-sample (extrapolatory) train/test splitting.
+            In the figure above: a visualization of prediction accuracy using mean squared error (L1) versus different derivative-informed losses (L2, L3, L4) for in-sample (random) and out-of-sample (extrapolative) train/test splitting.
           </figcaption>
         </figure>
 
@@ -380,13 +378,13 @@
             "
           />
           <figcaption style="margin-top: 8px; text-align: center; font-size:14px; color:#444;">
-            In video above: ground-truth versus predicted velocity (U, V) of flow past complex geometries using time-dependent Geometric-DeepONet.
+            In the video above: ground-truth versus predicted velocity (U, V) of flow past complex geometries using time-dependent Geometric-DeepONet.
           </figcaption>
         </figure>
 
         <h4>Three-Phase Flow</h4>
         <p>
-          This project focused on developing three-phase flow solver using projection-based Cahn-Hilliard Navier-Stokes equations. The solver employed adaptive mesh refinement (AMR) to efficiently simulate problems such as floating and rising bubbles in stratified fluids.
+          This project focused on developing a three-phase flow solver using projection-based Cahn-Hilliard Navier-Stokes equations. The solver employed adaptive mesh refinement (AMR) to efficiently simulate problems such as floating and rising bubbles in stratified fluids.
         </p>
         <figure class="video-figure">
         <div class="video-row">
@@ -406,7 +404,7 @@
           </div>
         </div>
         <figcaption>
-          In video above: two cases of bubble rise in a stratified flow with a critical radius of 1.5 mm. The smaller bubble becomes trapped at the interface, while the larger bubble penetrates through.
+          In the videos above: two cases of bubble rise in a stratified flow with a critical radius of 1.5 mm. The smaller bubble becomes trapped at the interface, while the larger bubble penetrates through.
         </figcaption>
       </figure>
     </div>
@@ -426,7 +424,7 @@
     <li>
       <strong>Generative Design</strong><br>
       <ul style="padding-left: 20px;">
-      <li>Used AI/ML to discover new designs for application in the semiconductor industry.</li>
+      <li>Used AI/ML to discover new designs for applications in the semiconductor industry.</li>
       </ul>
     </li>
   </ul>
@@ -441,7 +439,7 @@
       <li>
         <strong>Complex Geometry Flow Modeling</strong>
         <ul style="padding-left: 20px;">
-          <li>Led 6-member team to generate an 8 TB dataset of 10 000 flow cases around complex geometries using the Shifted Boundary Method.</li>
+          <li>Led a 6-member team to generate an 8 TB dataset of 10,000 flow cases around complex geometries using the Shifted Boundary Method.</li>
           <li>Designed a PyTorch Lightning framework to train 11 SciML models, achieving 80% flow accuracy           
           <a 
           href="https://github.com/alirabeh/GeometryMatters" 
@@ -458,7 +456,7 @@
       <li>
         <strong>Derivative-Informed 3D Surrogates</strong>
         <ul style="padding-left: 20px;">
-          <li>Utilized the Shifted Boundary Method to simulate 3D driven-cavity across 100 geometries.</li>
+          <li>Utilized the Shifted Boundary Method to simulate 3D driven-cavity flows across 100 geometries.</li>
           <li>Developed the Geometric-DeepONet model using derivative-informed and physics-informed losses 
           <a 
           href="https://github.com/alirabeh/DI-DeepONet" 
@@ -469,7 +467,7 @@
           (GitHub). 
           </a>
         </li>
-          <li>Achieved 94% velocity and 82% gradient accuracy in random settings, and 82%/61% in extrapolatory regime.</li>
+          <li>Achieved 94% velocity and 82% gradient accuracy in random settings, and 82%/61% in the extrapolative regime.</li>
         </ul>
       </li>
       <li>
@@ -511,7 +509,7 @@
         <ul style="padding-left: 20px;">
           <li>Developed a second-order two-phase solver using Cahn-Hilliard Navier–Stokes equations.</li>
           <li>Implemented variational multiscale stabilization in FEniCS for high-density-ratio flows.</li>
-          <li>Simulated 3D flows with density ratios up to 120,000 using adaptive mesh refinement with 100 Million unknowns.</li>
+          <li>Simulated 3D flows with density ratios up to 120,000 using adaptive mesh refinement with 100 million unknowns.</li>
         </ul>
       </li>
     </ul>
@@ -523,7 +521,7 @@
       <em>Jan 2025 – May 2025</em>
     </p>
     <ul style="padding-left: 20px;">
-      <li>Instructed 40 students on using Python (NumPy, SciPy) to solve complex statics and thermo-fluids problems.</li>
+      <li>Instructed 40 students on using Python (NumPy, SciPy) to solve complex statics and thermofluid problems.</li>
     </ul>
 
     <p>
